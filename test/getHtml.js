@@ -5,8 +5,9 @@ const fs = require('fs');
 let files = fs.readdirSync('.');
 
 files = files.filter(file => {
-    return fs.statSync(file).isFile() && /\.html$/.test(file);
-});
+    return  fs.statSync(file).isFile() && /\.html$/.test(file);
+}
+);
 
 describe('Кол-во html файлов', () => {
     it('Должен быть один html-файл в проекте', () => {
